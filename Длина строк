@@ -1,6 +1,7 @@
-package com.company;
+package com.hello;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -33,7 +34,7 @@ public class Main
             str[i] = sc2.nextLine();
         }
         //сортировка массива строк по длине
-        for (int i = 0; i < str.length-1; i++)
+        for (int i = 0; i < str.length - 1; i++)
         {
             for (int j = i+1; j < str.length; j++)
             {
@@ -54,5 +55,22 @@ public class Main
                 System.out.print(" ");
             System.out.println(" : длина строки = " + str[i].length());
         }
+
+//        Arrays.sort(str);
+
+        for (int i = 0; i < str.length; i++)
+        {
+            for (int j = 0; j < str.length; j++)
+            {
+                if (str[i].compareTo(str[j]) < 1)
+                {
+                    String tmp = str[i];
+                    str[i] = str[j];
+                    str[j] = tmp;
+                }
+            }
+        }
+
+        System.out.println(Arrays.toString(str));
     }
 }
