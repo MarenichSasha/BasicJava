@@ -1,2 +1,0 @@
-# BasicJava
-Hillel-School
