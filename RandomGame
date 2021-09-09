@@ -22,7 +22,7 @@ public class Main {
             {
                 System.out.println("Num > rand");
             }
-                System.out.print(" incorrect, Enter your number: ");
+                System.out.print("Your number is incorrect!\nEnter your number please: ");
             num = scanner.nextInt();
         }
         System.out.println("Your number is right!");
