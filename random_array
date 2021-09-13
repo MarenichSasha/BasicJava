@@ -1,0 +1,22 @@
+package com.hello;
+
+import java.util.Random;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Random r = new Random();
+        int[][] arr = new int[8][8];
+        for (int row = 0; row < arr.length; row++) {
+            for (int colomn = 0; colomn < arr[row].length; colomn++) {
+                arr[row][colomn] = r.nextInt(8);
+            }
+        }
+        for (int row = 0; row < arr.length; row++) {
+            for (int colomn = 0; colomn < arr[row].length; colomn++) {
+                System.out.print(arr[row][colomn] + ", ");
+            }
+            System.out.println();
+        }
+    }
+}
