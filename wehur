@@ -1,0 +1,39 @@
+import java.util.Arrays;
+import java.util.Scanner;
+import java.util.InputMismatchException;
+public class Main {
+    public static void main(String[] args) {
+
+        // ctrl + alt + V = extract var
+
+        // формат ввода даты + 2 переменных
+
+//        String date = "02.03";
+//        String[] split =date.split("\\.");
+//        System.out.println(Arrays.toString(split));
+//        String day1 = split[0];
+//        String month = split[1];
+//        int monthNumber = Integer.parseInt(month);
+//        System.out.println(monthNumber);
+//        System.out.println(Month.values()[monthNumber]);
+//        System.out.println(Month.values()[monthNumber - 1]);
+
+        //сканировать переменную на цифру
+
+        System.out.println("Введите дату по примеру DD.MM :");
+        Scanner sc1 = new Scanner(System.in);
+        String date = sc1.next();
+        // date = 01.01
+        // 01 JANUARY
+        String day = date.substring(0,2);
+        String month = date.substring(3,5);
+        System.out.println("День" + day);
+        System.out.println("Месяц" + month);
+
+        int monthNum = Integer.parseInt(month);
+
+        Month monthName = Month.values()[monthNum - 1];
+
+        System.out.println(monthName);
+    }
+}
