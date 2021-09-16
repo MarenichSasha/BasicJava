@@ -1,0 +1,35 @@
+public class Main {
+    public static void main(String[] args) {
+	for (Month m : Month.values())
+    {
+        switch (m)
+        {
+            case DECEMBER:
+            case JANUARY:
+            case FEBRUARY:
+                System.out.println(m.toString() + " Winter");
+                break;
+
+            case MARCH:
+            case APRIL:
+            case MAY:
+                System.out.println(m.toString() + " Spring");
+                break;
+
+            case JUNE:
+            case JULY:
+            case AUGUST:
+                System.out.println(m.toString() + " Summer");
+                break;
+
+            case SEPTEMBER:
+            case OCTOBER:
+            case NOVEMBER:
+                System.out.println(m +" Automn");
+                break;
+            default:
+                System.out.println(m + " Not month");
+        }
+    }
+    }
+}
