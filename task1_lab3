@@ -1,0 +1,11 @@
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String args[]) {
+        System.out.println("End your string :");
+        Scanner sc1 = new Scanner(System.in);
+        String line = sc1.nextLine();
+        boolean b= line.endsWith("ed");
+        System.out.println("String " + line + " ends with 'ed'?  " + b);
+    }
+}
