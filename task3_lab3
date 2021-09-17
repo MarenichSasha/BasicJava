@@ -1,0 +1,25 @@
+package com.company;
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter your block with words:");
+        String WordWithBlocks = in.next();
+        int max = 0;
+        int c = 0;
+        for (int i = 0; i < WordWithBlocks.length() - 1; i++) {
+            if (WordWithBlocks.charAt(i) == WordWithBlocks.charAt(i + 1)) {
+                c++;
+                if (c > max) {
+                    max = c;
+                }
+                if (WordWithBlocks.charAt(i) != WordWithBlocks.charAt(i + 1)) {
+                    c = 0;
+                }
+            }
+        }
+        max++;
+        System.out.println("Your longest block: " + max);
+    }
+}
+
