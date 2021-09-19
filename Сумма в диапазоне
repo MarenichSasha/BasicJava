@@ -1,0 +1,30 @@
+package com.company;
+import java.util.Scanner;
+import java.util.InputMismatchException;
+public class Main {
+
+    public static void main(String[] args) {
+        int n = 0;
+        int v = 0;
+        System.out.println("Введите нижнюю границу чисел:");
+        Scanner sc1 = new Scanner(System.in);
+        Scanner sc2 = new Scanner(System.in);
+        try
+        {
+            n = sc1.nextInt();
+            System.out.println("Введите верхнюю границу чисел:");
+            v = sc2.nextInt();
+        }
+        catch(InputMismatchException fg)
+        {
+            // если введенное значение не является числом
+            System.out.print("Вы ввели не число. ");
+        }
+        int sum = 0;
+        for (int i = n; i <= v; i++)
+        {
+            sum += i;
+        }
+        System.out.println("Сумма чисел в диапазоне от " + n + " до " + v + " равна " + sum);
+    }
+}
