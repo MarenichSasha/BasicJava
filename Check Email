@@ -1,0 +1,12 @@
+public class Main {
+
+    public static void main(String[] args) {
+        String email = "name@gmail.com";
+        System.out.println(isemail(email));
+    }
+        private static boolean isemail(String email)
+        {
+            System.out.println("Checking:" + email);
+            return email.matches("\\w*@\\w*mail.com");
+        }
+}
