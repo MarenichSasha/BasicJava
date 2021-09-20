@@ -1,0 +1,22 @@
+package com.company;
+import java.util.Scanner;
+import java.util.InputMismatchException;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n = readNumber(s, "Введите нижнюю границу чисел:");
+        int v = readNumber(s, "Введите верхнюю границу чисел:");
+        int sum = 0;
+        for (int i = n; i <= v; i++) {
+            sum += i;
+        }
+        System.out.println("Сумма чисел в диапазоне от " + n + " до " + v + " равна " + sum);
+    }
+
+    private static int readNumber(Scanner s, String message) {
+        System.out.println(message);
+        return s.nextInt();
+    }
+}
