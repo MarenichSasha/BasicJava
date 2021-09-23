@@ -1,0 +1,36 @@
+package com.company;
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        int a = 0;
+        System.out.printf("Введите количество элементов массива: ");
+        Scanner sc1 = new Scanner(System.in);
+        a = sc1.nextInt();
+        int[] array;
+        array = new int[a];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = ((int)(Math.random() * 12) - 15);
+            System.out.println(array[i]);
+        }
+        int indexOfMax = 0;
+        int indexOfMin = 0;
+        for (int i = 1; i < array.length; i++)
+        {
+            if (array[i] > array[indexOfMax])
+            {
+                indexOfMax = i;
+            }
+            else if (array[i] < array[indexOfMin])
+            {
+                indexOfMin = i;
+            }
+        }
+        System.out.println("Минимальное значение элементов массива: " + array[indexOfMin]);
+        System.out.println("Максимальное значение элементов массива: " + array[indexOfMax]);
+        indexOfMax++;
+        indexOfMin++;
+        System.out.println("Номер по порядку минимального значения: " + indexOfMin);
+        System.out.println("Номер по порядку максимального значения: " + indexOfMax);
+    }
+}
