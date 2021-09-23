@@ -6,3 +6,39 @@ public class Main {
         System.out.println(date.toString());
     }
 }
+
+
+
+///
+
+
+
+import java.util.*;
+import java.text.*;
+public class Main {
+    public static void main(String args[]) {
+        Date dateNow = new Date();
+        SimpleDateFormat formatForDateNow = new SimpleDateFormat("hh:mm:ss");
+        System.out.println("Time: " + formatForDateNow.format(dateNow));
+    }
+}
+
+
+ 
+///
+
+
+
+import java.util.*;
+import java.text.*;
+
+public class Main {
+    public static void main(String args[]) {
+        Date dateNow = new Date();
+        SimpleDateFormat formatForDateNow = new SimpleDateFormat("hh:mm:ss a");
+        System.out.println("Time 12 hours: " + formatForDateNow.format(dateNow));
+        Date dateNow2 = new Date();
+        SimpleDateFormat formatForDateNow2 = new SimpleDateFormat("HH:mm:ss");
+        System.out.println("Time 24 hours: " + formatForDateNow2.format(dateNow2));
+    }
+}
