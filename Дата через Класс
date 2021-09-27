@@ -1,0 +1,68 @@
+public class Time {
+    private int hour;
+    private int minute;
+    private int second;
+
+    public Time() {
+    }
+
+    public Time(int hour, int minute, int second) {
+        this.hour = hour;
+        this.minute = minute;
+        this.second = second;
+    }
+
+    public void setHour(int hour) {
+        this.hour = hour;
+    }
+
+    public void setMinute(int minute) {
+        this.minute = minute;
+    }
+
+    public void setSecond(int second) {
+        this.second = second;
+    }
+
+    public int getHour() {
+        return hour;
+    }
+
+    public int getMinute() {
+        return minute;
+    }
+
+    public int getSecond() {
+        return second;
+    }
+
+    public String print12()
+    {
+        return String.format("%d:%d:%d", hour, minute, second);
+    }
+
+    public String print24()
+    {
+        return String.format("%2d:%2d:%2d", hour, minute, second);
+    }
+
+    @Override
+    public String toString() {
+        return "Time{" +
+                "hour=" + hour +
+                ", minute=" + minute +
+                ", second=" + second +
+                '}';
+    }
+}
+
+
+public class Main {
+
+    public static void main(String[] args) {
+	Time time1 = new Time(1,30,25);
+    Time time2 = new Time(20,25,50);
+        System.out.println("time 1 = " + time1.print12());
+        System.out.println("time 2 = " + time2.print24());
+    }
+}
