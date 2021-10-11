@@ -1,0 +1,42 @@
+//Создать клас:
+*** CollectionTest
+
+
+import java.util.*;
+
+public class CollectionTest {
+    public static void main(String[] args) {
+        String[] students = new String[] {
+                "Никита Листопад",
+                "Даниил Притула",
+                "Александр Шевченко",
+                "Александр Маренич",
+                "София Петрова",
+                "Павел Зинченко",
+                "Дмитрий Олейник",
+                "Евгений Гута",
+                "Александр Гросу",
+                "Pavlo Gorduz",
+                "Теймураз Иванеишвили",
+                "Александр Дерецкий"
+        };
+
+        Collection<String> linkedList = fill(new LinkedList<>(), students);
+        Collection<String> arrayList = fill(new ArrayList<>(), students);
+        Collection<String> hashSet = fill(new HashSet<>(), students);
+        Collection<String> treeSet = fill(new TreeSet<>(), students);
+
+        System.out.println("Array: " + Arrays.toString(students));
+        System.out.println("linkedList: " + linkedList);
+        System.out.println("arrayList: " + arrayList);
+        System.out.println("hashSet: " + hashSet);
+        System.out.println("treeSet: " + treeSet);
+    }
+
+    public static Collection<String> fill(Collection<String> collection, String[] arr){
+        for (String s: arr){
+            collection.add(s);
+        }
+        return collection;
+    }
+}
